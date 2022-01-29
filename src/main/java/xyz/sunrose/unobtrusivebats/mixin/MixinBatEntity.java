@@ -16,9 +16,14 @@ public abstract class MixinBatEntity extends AmbientEntity {
         super(entityType, world);
     }
 
-    @Inject(method = "<init>(Lnet/minecraft/entity/EntityType;Lnet/minecraft/world/World;)V", at = @At("TAIL"))
+    /*@Inject(method = "<init>(Lnet/minecraft/entity/EntityType;Lnet/minecraft/world/World;)V", at = @At("TAIL"))
     private void injectConstructor(EntityType<? extends BatEntity> entityType, World world, CallbackInfo info) {
         this.setSilent(true);
+    }*/
+
+    @Override
+    public float getSoundVolume() {
+        return 0F;
     }
 
     @Override
@@ -26,4 +31,9 @@ public abstract class MixinBatEntity extends AmbientEntity {
         return false;
     }
 
+    private static boolean isTodayAroundHalloween() {
+        return false;
+    }
+
 }
+

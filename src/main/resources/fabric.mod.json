@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "unobtrusive-bats",
   "version": "${version}",
 
   "name": "Unobtrusive bats",
@@ -27,7 +27,6 @@
 
   "depends": {
     "fabricloader": ">=0.12.12",
-    "fabric": "*",
     "minecraft": "1.18.x",
     "java": ">=17"
   },

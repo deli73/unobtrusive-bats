@@ -23,5 +23,9 @@ public abstract class MixinBatEntity extends AmbientEntity {
         return false;
     }
 
+    @Override
+    public boolean isAttackable() {
+        return false;
+    }
 }
 
